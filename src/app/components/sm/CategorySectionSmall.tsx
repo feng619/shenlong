@@ -17,7 +17,7 @@ export default function CategorySectionSmall() {
       <div className="flex flex-col items-center">
         {categories.map(({ title, description, src }) => {
           return (
-            <Card className="flex w-[400px] m-2" key={title}>
+            <Card className="flex w-[320px] xs:w-[400px] m-2" key={title}>
               <CardHeader className="p-0">
                 <div className="relative w-24 h-24">
                   <Image

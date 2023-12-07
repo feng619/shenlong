@@ -7,7 +7,7 @@ export default function DeliverySectionSmall() {
       <div className="p-4">
         <h3 className="text-2xl font-bold text-center pb-4">宅配服務</h3>
 
-        <div className="text-xl text-stone-600 pl-10 pr-6">
+        <div className="text-base xs:text-xl text-stone-600 pl-10 pr-6">
           <div className="flex">
             <CircleDollarSign className="mr-4 text-orange-400" size={30} />
 

@@ -13,13 +13,9 @@ export default function StorePictureSectionSmall() {
       />
 
       <div className="absolute w-full h-full top-0 left-0 flex items-center justify-center z-10">
-        <div className="relative w-2/3 p-4 text-center">
-          <p className="relative text-2xl text-stone-100 z-20 pb-2">
-            您要的五金都在這裡
-          </p>
-          <p className="relative text-2xl text-stone-100 z-20">
-            歡迎參觀選購或電洽詢問
-          </p>
+        <div className="relative w-2/3 p-4 text-center text-lg xs:text-2xl text-stone-100">
+          <p className="relative z-20 pb-2">您要的五金都在這裡</p>
+          <p className="relative z-20">歡迎參觀選購或電洽詢問</p>
 
           <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-md" />
         </div>
