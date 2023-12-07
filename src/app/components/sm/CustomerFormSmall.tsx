@@ -33,15 +33,23 @@ export default function CustomerFormSmall() {
     resolver: zodResolver(FormSchema),
   });
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast({
-      title: "您的意見回饋發送成功",
-      description: "感謝您寶貴的意見回饋！",
-    });
+  async function onSubmit(data: z.infer<typeof FormSchema>) {
+    const res = await sendMsg(data);
 
-    form.reset({ myForm: "" });
+    if (res.status === 200) {
+      toast({
+        title: "您的意見回饋發送成功",
+        description: "感謝您寶貴的意見回饋！",
+      });
 
-    sendMsg(data);
+      form.reset({ myForm: "" });
+    } else {
+      toast({
+        title: "您的意見回饋發送失敗",
+        description: `${res.statusText} (${res.status}) ${res.authLen} ${res.authStr}`,
+        variant: "destructive",
+      });
+    }
   }
 
   return (
@@ -68,7 +76,7 @@ export default function CustomerFormSmall() {
               </FormItem>
             )}
           />
-          <Button type="submit" className="bg-orange-600">
+          <Button type="submit" className="bg-orange-600 hover:bg-orange-700">
             送出意見
           </Button>
         </form>
