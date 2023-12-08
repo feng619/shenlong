@@ -3,7 +3,7 @@
 import * as z from "zod";
 import axios from "axios";
 
-import { FormSchema } from "../components/sm/CustomerFormSmall";
+import { FormSchema } from "../components/CustomerForm";
 
 export default async function sendMsg(data: z.infer<typeof FormSchema>) {
   try {
@@ -51,8 +51,6 @@ export default async function sendMsg(data: z.infer<typeof FormSchema>) {
     return {
       status: error?.response?.status,
       statusText: error?.response?.statusText,
-      authLen: process.env.AUTH?.length,
-      authStr: process.env.AUTH?.substring(0, 3),
     };
   }
 }

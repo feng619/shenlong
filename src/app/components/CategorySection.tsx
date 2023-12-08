@@ -11,13 +11,13 @@ import { categories } from "@/app/constants";
 
 export default function CategorySection() {
   return (
-    <div className="my-10">
-      <h3 className="text-3xl font-bold text-center m-8">商品分類</h3>
+    <div className="my-6">
+      <h3 className="text-2xl font-bold text-center pb-4">商品分類</h3>
 
-      <div className="flex flex-wrap">
+      <div className="flex flex-col items-center justify-center md:flex-row md:flex-wrap">
         {categories.map(({ title, description, src }) => {
           return (
-            <Card className="flex w-[400px] m-2" key={title}>
+            <Card className="flex w-[320px] xs:w-[400px] m-2" key={title}>
               <CardHeader className="p-0">
                 <div className="relative w-24 h-24">
                   <Image

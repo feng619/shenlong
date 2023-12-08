@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
-import sendMsg from "../../utils/sendMsg";
+import sendMsg from "../utils/sendMsg";
 
 export const FormSchema = z.object({
   myForm: z
@@ -28,7 +28,7 @@ export const FormSchema = z.object({
     }),
 });
 
-export default function CustomerFormSmall() {
+export default function CustomerForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   });
@@ -38,26 +38,26 @@ export default function CustomerFormSmall() {
 
     if (res.status === 200) {
       toast({
-        title: "您的意見回饋發送成功",
+        title: "發送成功",
         description: "感謝您寶貴的意見回饋！",
       });
 
       form.reset({ myForm: "" });
     } else {
       toast({
-        title: "您的意見回饋發送失敗",
-        description: `${res.statusText} (${res.status}) ${res.authLen} ${res.authStr}`,
+        title: "發送失敗",
+        description: `${res.statusText} (${res.status})`,
         variant: "destructive",
       });
     }
   }
 
   return (
-    <div className="flex justify-center m-6">
+    <div className="flex justify-center mx-2 my-6 xs:m-6">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="w-[400px] space-y-4 "
+          className="w-[280px] xs:w-[400px] space-y-4"
         >
           <FormField
             control={form.control}

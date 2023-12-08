@@ -7,40 +7,46 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
+import shenlongName from "../../../public/images/shenlong-name.png";
 
 export default function MainSection() {
   return (
-    <div className="relative w-full h-[460px] my-10">
-      <Image
-        src="/images/shenlong-main.png"
-        alt="main"
-        fill
-        style={{ objectFit: "contain" }}
-        className="opacity-20"
-        sizes="100%"
-      />
+    <div
+      style={{
+        backgroundImage: `url(/images/dot-column.png)`,
+        backgroundSize: "contain",
+        backgroundRepeat: "repeat-x",
+      }}
+      className="py-8"
+    >
+      <div className="relative mx-4 mb-2 xs:mx-16 xs:mb-4 md:mx-40 lg:mx-72 xl:mx-96">
+        <Image src={shenlongName} alt="神隆五金行" sizes="100vw" priority />
+      </div>
 
-      <div className="absolute w-full h-[460px] z-50 p-24 flex justify-center items-center">
-        <div className="mr-20">
-          <h1 className="text-4xl font-extrabold tracking-wide">神隆五金行</h1>
-          <h3 className="text-stone-400 mt-2">ShenLong Hardware Store</h3>
-          <h4 className="text-orange-400 mt-2">since 1984</h4>
-          <h3 className="text-stone-400 mt-2">
-            螺絲 · 門鎖 · 皮帶 · 矽利康 · 輪子 · 手推車
-          </h3>
-          <h3 className="text-stone-400">
-            噴漆 · 粉刷 · 鑽頭 · 刀具 · 捲尺 · 潤滑油
-          </h3>
-        </div>
+      <div className="flex flex-col items-center mx-10">
+        <h1 className="hidden">神隆五金行</h1>
+        <h3 className="text-lg text-stone-500">ShenLong Hardware Store</h3>
+        <h4 className="text-orange-500">since 1984</h4>
+        <h3 className="text-stone-500 mt-2">
+          螺絲 · 鎖 · 皮帶 · 矽利康 · 輪子 · 手推車
+        </h3>
+        <h3 className="text-stone-500">
+          噴漆 · 粉刷 · 鑽頭 · 刀具 · 捲尺 · 潤滑油
+        </h3>
+      </div>
 
+      <div className="flex justify-center mt-6">
         <div>
           <div className="flex text-xl">
-            <MapPin className="mt-2 mr-4 mb-2 text-orange-400" size={30} />
+            <MapPin
+              className="mt-2 mb-2 mr-2 xs:mr-4 text-orange-400"
+              size={30}
+            />
 
             <Popover>
               <PopoverTrigger asChild>
                 <Button variant="ghost">
-                  <p className="text-stone-600 text-xl">
+                  <p className="text-stone-600 text-lg xs:text-xl">
                     202 基隆市中正區義二路100號
                   </p>
                 </Button>
@@ -59,24 +65,24 @@ export default function MainSection() {
             </Popover>
           </div>
 
-          <div className="flex text-xl">
+          <div className="flex text-lg xs:text-xl">
             <Phone className="mt-2 mr-4 text-orange-400" size={30} />
 
             <p className="text-stone-600 py-2 px-4">02-2424-6455</p>
           </div>
 
-          <div className="flex text-xl">
+          <div className="flex text-lg xs:text-xl">
             <Clock className="mt-2 mr-4 text-orange-400" size={30} />
 
             <div className="text-stone-600 py-2 px-4">
-              <div className="grid grid-cols-3">
+              <div className="grid grid-cols-2">
                 <p className="mr-4">週一 ~ 週五</p>
-                <p className="col-span-2">08:00–18:00</p>
+                <p>08:00–18:00</p>
               </div>
 
-              <div className="grid grid-cols-3">
+              <div className="grid grid-cols-2">
                 <p className="mr-4">週六</p>
-                <p className="col-span-2">08:00–13:00</p>
+                <p>08:00–13:00</p>
               </div>
             </div>
           </div>

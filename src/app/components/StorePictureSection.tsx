@@ -1,15 +1,16 @@
 import Image from "next/image";
 
-export default function StorePictureSectionSmall() {
+import mosaic2 from "../../../public/images/mosaic2.png";
+
+export default function StorePictureSection() {
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-auto lg:w-1/2 lg:m-auto lg:rounded-lg">
       <Image
-        src="/images/mosaic2.png"
-        alt="神隆五金行"
-        width={0}
-        height={0}
+        src={mosaic2}
+        alt="神隆五金行琳瑯滿目的商品展示圖"
         sizes="100vw"
-        style={{ width: "100%", height: "auto" }}
+        placeholder="blur"
+        loading="eager"
       />
 
       <div className="absolute w-full h-full top-0 left-0 flex items-center justify-center z-10">
