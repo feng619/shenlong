@@ -7,7 +7,7 @@ export default function StorePictureSection() {
     <div className="relative w-full h-auto lg:w-1/2 lg:m-auto lg:rounded-lg">
       <Image
         src={mosaic2}
-        alt="神隆五金行琳瑯滿目的商品展示圖"
+        alt="神隆五金琳瑯滿目的商品展示圖"
         sizes="100vw"
         placeholder="blur"
         loading="eager"

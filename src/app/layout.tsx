@@ -9,15 +9,15 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.shenlong-hardware.store"),
-  title: "神隆五金行",
+  title: "神隆五金有限公司",
   description:
-    "位於台灣基隆的五金行，販售各種生活、水電、施工、加工等會用到的器材、工具和零件",
+    "位於台灣基隆的老字號五金店鋪，販售各種生活、水電、施工、加工等會用到的器材、工具和零件",
   openGraph: {
-    title: "神隆五金行",
+    title: "神隆五金有限公司",
     description:
-      "位於台灣基隆的老字號五金行，販售各種生活、水電、施工、加工等會用到的器材、工具和零件",
+      "位於台灣基隆的老字號五金店鋪，販售各種生活、水電、施工、加工等會用到的器材、工具和零件",
     url: "/",
-    siteName: "神隆五金行",
+    siteName: "神隆五金有限公司",
     images: [
       {
         url: "/images/mosaic3_800.png",
@@ -36,11 +36,12 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-  generator: "神隆五金行",
-  applicationName: "神隆五金行",
+  generator: "神隆五金有限公司",
+  applicationName: "神隆五金有限公司",
   keywords: [
     "神隆",
-    "五金行",
+    "商店",
+    "店鋪",
     "五金",
     "小五金",
     "大五金",
@@ -64,7 +65,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Kai Wu" }],
   creator: "Kai Wu",
-  publisher: "神隆五金行",
+  publisher: "神隆五金有限公司",
 };
 
 export default function RootLayout({

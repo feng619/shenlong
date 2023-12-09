@@ -20,11 +20,16 @@ export default function MainSection() {
       className="py-8"
     >
       <div className="relative mx-4 mb-2 xs:mx-16 xs:mb-4 md:mx-40 lg:mx-72 xl:mx-96">
-        <Image src={shenlongName} alt="神隆五金行" sizes="100vw" priority />
+        <Image
+          src={shenlongName}
+          alt="神隆五金有限公司"
+          sizes="100vw"
+          priority
+        />
       </div>
 
       <div className="flex flex-col items-center mx-10">
-        <h1 className="hidden">神隆五金行</h1>
+        <h1 className="hidden">神隆五金有限公司</h1>
         <h3 className="text-lg text-stone-500">ShenLong Hardware Store</h3>
         <h4 className="text-orange-500">since 1984</h4>
         <h3 className="text-stone-500 mt-2">
